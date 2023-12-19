@@ -21,7 +21,7 @@
         <div class="main container">
             {% for blog_post in blog_posts %}
             <div class="blog-container">
-                <div class="title"><a href="{% url 'blog_page' key={{blog_post.id}}">{{blog_post.title}}</a></div>
+                <div class="title"><a href="{% url 'blog_page' key=blog_post.id %}">{{blog_post.title}}</a></div>
                 <div class="discription">{{blog_post.content|truncatewords:60}}</div>
                 <div class="timestamp">{{blog_post.timestamp}}</div>
             </div>
