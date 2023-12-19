@@ -19,18 +19,15 @@
 
         <!-- container for available posts with title and short discription of the post -->
         <div class="main container">
+            {% for blog_post in blog_posts %}
             <div class="blog-container">
-                <div class="title">This is the title of the blog</div>
-                <div class="discription">Hiiiiiiiiiii. This is the discription for the texting purpose.</div>
-                <div class="timestamp">3.43</div>
+                <div class="title"><a href="{% url 'blog_page' key={{blog_post.id}}">{{blog_post.title}}</a></div>
+                <div class="discription">{{blog_post.content|truncatewords:60}}</div>
+                <div class="timestamp">{{blog_post.timestamp}}</div>
             </div>
-
-            <div class="blog-container">
-                <div class="title">This is the title of the blog</div>
-                <div class="discription">Hiiiiiiiiiii. This is the discription for the texting purpose.</div>
-                <div class="timestamp">3.43</div>
-            </div>
+            {% endfor %}
         </div>
+    </div>
     </div>
 </body>
 
