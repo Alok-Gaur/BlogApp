@@ -19,7 +19,7 @@
         <!-- Form to create Posts -->
         <div class="create-post container">
             <h2>Create Blog</h2>
-            <form action="" method="post" class="create-post-form">
+            <form action="" method="post" class="create-post-form" onsubmit="return validateForm()">
                 {% csrf_token %}
                 <input type="hidden" name="form_type" value="create">
                 <label for="title">Title</label>
@@ -47,6 +47,9 @@
             {% endfor %}
         </div>
     </div>
+    <!-- This Script for jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'script/admin-form-validation.js' %}"></script>
 </body>
 
 </html>
