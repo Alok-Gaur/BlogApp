@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style/blog-page.css' %}">
-    <title>Blog</title>
+    <title>{{blog_post.title}}</title>
 </head>
 
 <body>
@@ -17,8 +17,8 @@
         <div class="logo">
             <h3>BlogPost</h3>
         </div>
-        <div class="title">This is blog Title</div>
-        <div class="content">hiiii. this is a content of the blog.</div>
+        <div class="title">{{blog_post.title}}</div>
+        <div class="content">{{blog_post.content|linebreaks|safe}}</div>
     </div>
 </body>
 

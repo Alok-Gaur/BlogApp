@@ -18,5 +18,7 @@ body {
 .content {
     background-color: white;
     height: 65vh;
+    width: 70vw;
+    margin: auto;
     padding: 40px 30px;
 }
